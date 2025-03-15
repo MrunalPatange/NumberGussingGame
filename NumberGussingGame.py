@@ -1,19 +1,19 @@
-#Guess the numer 
-# Ask user to enter a numer 
+#Guess the Number
+# Ask user to enter a Number 
 # If you are closer to number : then print ("Closer to number")
-# If guess number is bigger : then print(you're number is bigger )
+# If guess number is bigger : then print(your number is bigger )
 # If you are far from your number : then Print ("Wrong number ")
-# If you guess the exact number : then print ("You're Right, Congraluation!")
+# If you guess the exact number : then print ("You're Right, Congratulations!")
 
 
 import random
-#From User Range  
+#Ask User Minimum number and maximum number  
 min_value = int(input("Enter the minimum value of the range: "))
 max_value = int(input("Enter the maximum value of the range: "))
 
 number_to_guess = random.randint(min_value , max_value)
 
-#Ask user the maximum number of attempts 
+# maximum number of attempts 
 max_attempts = int(input("Enter the maximum number of attempts: "))
 
 attempts = 0
@@ -35,11 +35,11 @@ while attempts < max_attempts:
             best_score = attempts
         break
 
-    # Check if the number of attempts is more or less 
+    # Check if the number of attempts are more or less 
     if attempts == max_attempts:
         print(f"Sorry, you've run out of attempts. The correct number was {number_to_guess}.")
 
-# Displa the user best score 
+# Display the user best score 
 if best_score is not None:
     print(f"Your best score so far is {best_score} attempts.")
 
